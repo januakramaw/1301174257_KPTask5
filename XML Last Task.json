@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "f49c2da7-54eb-4101-b2f1-9c4e18abc562",
+		"name": "XML",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8181/customers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<Root xmlns=\"http://www.adventure-works.com\">\r\n    <Customers>\r\n        <Customer CustomerID=\"JJJ\">\r\n            <CompanyName>SMART FARM</CompanyName>\r\n            <ContactName>JANU</ContactName>\r\n            <ContactTitle>CEO</ContactTitle>\r\n            <Phone>(503) 555-7552</Phone>\r\n            <FullAddress>\r\n                <Address>BSD</Address>\r\n                <City>TANGERANG</City>\r\n                <Region>JC</Region>\r\n                <PostalCode>1234</PostalCode>\r\n                <Country>IND</Country>\r\n            </FullAddress>\r\n        </Customer>\r\n    </Customers>\r\n    <Orders>\r\n        <Order>\r\n            <CustomerID>JJJ</CustomerID>\r\n            <EmployeeID>1</EmployeeID>\r\n            <OrderDate>2020-02-12</OrderDate>\r\n            <RequiredDate>2020-03-12</RequiredDate>\r\n            <ShipInfo ShippedDate=\"2020-02-13\">\r\n                <ShipVia>2</ShipVia>\r\n                <Freight>90.97</Freight>\r\n                <ShipName>Let's Stop N Shop</ShipName>\r\n                <ShipAddress>87 Polk St. Suite 5</ShipAddress>\r\n                <ShipCity>San Francisco</ShipCity>\r\n                <ShipRegion>CA</ShipRegion>\r\n                <ShipPostalCode>94117</ShipPostalCode>\r\n                <ShipCountry>USA</ShipCountry>\r\n            </ShipInfo>\r\n        </Order>\r\n    </Orders>\r\n</Root>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8181/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
